@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: cornflowerblue;
+}
+
+.game{
+    width: 640px;
+    height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    perspective: 1000px; /*part of 3d effect*/
+}
+
+.card{
+    width: calc(12% - 3px); /*allows for adding padding without overflowing container*/
+    height: calc(12% - 3px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1); /*sets the scale for transform later*/
+    transform-style: preserve-3d; /*part of 3d effect*/
+    transition: transform .5s;
+}
+
+.card:active {
+    transform: scale(.97); /*shrinks card when selected*/
+    transition: transform .2s;
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    backface-visibility: hidden; /*hides the back side when it is flipped*/
+}
+
+.front{
+    transform: rotateY(180deg);
+}
+
+.card.flip {
+    transform: rotateY(180deg); /*when .flip class is present rotate*/
+}

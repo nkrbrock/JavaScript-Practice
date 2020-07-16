@@ -1,0 +1,28 @@
+<!DOCTYPE html> <!--hit ! then enter to get default info automatically--><!--followed https://www.youtube.com/watch?v=Y-GkMjUZsmM-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script> <!--defer means it will load after the HTML-->
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <!--can activate a div w/ name by doing .name enter and can specify how many with *# i.e. .name*2-->
+    <div class="board" id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+    </div>
+    <div class="winning-message" id="winningMessage">
+        <div data-winning-message-text></div>
+            <button id="restartButton">Restart</button>
+    </div> 
+</body>
+</html>
