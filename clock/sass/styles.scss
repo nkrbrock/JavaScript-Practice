@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+    background-color: $main-color;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: $font;
+}
+
+.clock{
+    background-color: $clock-color;
+    @include clock-style;
+}
